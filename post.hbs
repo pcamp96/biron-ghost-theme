@@ -20,21 +20,6 @@
     <div class="columns">
       <div class="column">
         <div class="post-content">
-          {{#if @member.paid}}
-            {{#foreach posts visibility="all"}}
-              {{> "post-card"}}
-            {{/foreach}}
-          {{else}}
-          {{#if @member}}
-        {{#foreach posts visibility="public,members"}}
-        {{> "post-card"}}
-        {{/foreach}}
-    {{else}}
-        {{#foreach posts visibility="public"}}
-        {{> "post-card"}}
-        {{/foreach}}
-    {{/if}}
-{{/if}}
           {{#if tags}}
             <div class="post-tags">
               {{#foreach tags limit="3"}}
