@@ -20,24 +20,25 @@
     <div class="columns is-multiline">
       {{#if @member.paid}}
             {{#foreach posts visibility="all"}}
-            {{> "post-card" class="bottom-border"}}
+            <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
+            {{> post-card class="bottom-border"}}
+            </div>
             {{/foreach}}
           {{else}}
             {{#if @member}}
             {{#foreach posts visibility="public,members"}}
-            {{> "post-card" class="bottom-border"}}
+            <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
+            {{> post-card class="bottom-border"}}
+            </div>
             {{/foreach}}
           {{else}}
             {{#foreach posts visibility="public"}}
-            {{> "post-card" class="bottom-border"}}
+            <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
+            {{> post-card class="bottom-border"}}
+            </div>
             {{/foreach}}
           {{/if}}
       {{/if}}
-      <!--{{#foreach posts }}-->
-        <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
-        {{> post-card class="bottom-border"}}
-        </div>
-      {{/foreach}}
     </div>
 
     {{pagination}}
